@@ -30,8 +30,8 @@ mongoose.connection.on('error', err => {
   console.error('Error connecting to mongo', err);
 });
 
-app.get('/', requireAuth, (req, res) => {
-  res.send(`Your email: ${req.user.email}`);
+app.get('/', () => {
+  res.send('Hello there');
 });
 
 app.listen(3000, () => {
